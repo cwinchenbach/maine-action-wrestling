@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: cwinchenbach/maine-action-wrestling
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Articles"
+    files:
+      - label: "Published articles"
+        name: "articles"
+        file: "data/articles.json"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Web address", name: "slug", widget: "string", hint: "Use lowercase words separated by hyphens, e.g. friday-night-recap" }
+              - { label: "Publication date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+              - { label: "Category", name: "category", widget: "select", options: ["Opinion", "Reaction", "Review", "News", "Column", "Feature"] }
+              - { label: "Short summary", name: "excerpt", widget: "text" }
+              - { label: "Article", name: "body", widget: "markdown" }
