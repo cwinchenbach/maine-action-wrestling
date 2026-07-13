@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maine Action Wrestling — Writer Dashboard</title>
+  </head>
+  <body>
+    <script>window.CMS_MANUAL_INIT = true;</script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({ config: {
+        backend: { name: 'git-gateway', branch: 'main' },
+        media_folder: 'assets/uploads',
+        public_folder: '/assets/uploads',
+        collections: [{
+          name: 'articles', label: 'Articles', files: [{
+            label: 'Published articles', name: 'articles', file: 'data/articles.json', fields: [{
+              label: 'Articles', name: 'articles', widget: 'list', fields: [
+                { label: 'Title', name: 'title', widget: 'string' },
+                { label: 'Web address', name: 'slug', widget: 'string' },
+                { label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD', time_format: false },
+                { label: 'Category', name: 'category', widget: 'string' },
+                { label: 'Summary', name: 'excerpt', widget: 'text' },
+                { label: 'Article', name: 'body', widget: 'markdown' }
+              ]
+            }]
+          }]
+        }]
+      }});
+    </script>
+  </body>
+</html>
