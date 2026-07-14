@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "title": "The art of the heel turn is still wrestling's greatest magic trick.",
+      "slug": "the-art-of-the-heel-turn",
+      "date": "2026-06-12",
+      "category": "Review",
+      "excerpt": "It only works when the audience wants to believe the betrayal.",
+      "body": "A heel turn only lands when the audience has invested in the relationship first. The best turns do not just surprise us—they make us reconsider every moment that came before."
+    },
+    {
+      "title": "Last night, the main event remembered how to breathe.",
+      "slug": "the-main-event-remembered-how-to-breathe",
+      "date": "2026-06-10",
+      "category": "Spotlight",
+      "excerpt": "A match that left room for the crowd to feel every turn.",
+      "body": "The best main events are not built from moves alone. They are built from pacing, patience, and knowing when to let the arena speak."
+    }
+  ]
+}
